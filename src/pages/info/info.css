@@ -1,0 +1,46 @@
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.infoWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.infoImg {
+  width: 100%;
+  object-fit: cover;
+	width: 413px;
+	height: 413px;
+}
+
+.infoDetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.infoDetailsTexts {
+  flex: 3;
+}
+
+.infoDesc {
+  font-size: 14px;
+  margin-top: 20px;
+	text-align: justify;
+}
+
+.infoDetailsPrice {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
