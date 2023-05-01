@@ -47,11 +47,6 @@
   font-weight: 500;
 }
 
-.placePriceHighlight {
-  color: #008009;
-  font-weight: 500;
-}
-
 .placeImages {
   display: flex;
   flex-wrap: wrap;

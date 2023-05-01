@@ -91,9 +91,6 @@ const Place = () => {
           <span className="placeDistance">
             Отличная локация – 2,7км от центра
           </span>
-          {/* <span className="placePriceHighlight">
-            Book a stay over $114 at this property and get a free airport taxi
-          </span> */}
           <div className="placeImages">
             {photos.map((photo, i) => (
               <div className="placeImgWrapper" key={i}>
