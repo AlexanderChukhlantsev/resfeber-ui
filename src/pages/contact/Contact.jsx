@@ -14,14 +14,20 @@ const Contact = () => {
 					<h1 className="contactTitle">Связаться с нами</h1>
 					<div className="contactDetails">
 						<div className="contactDetailsTexts">
-							<h5>Для связи используйте:</h5>
-							<a href="mailto:resfeber@gmail.com">resfeber@gmail.com</a>
-							<a href="https://vk.com/resfeber.travel" 
-								target="_blank"
-								rel = "noreferrer"
-							>
-								Сообщество Вконтакте
-							</a>
+							<div className="contactDetailsTextsItem">
+								<h5>Для связи используйте:</h5>
+							</div>
+							<div className="contactDetailsTextsItem">
+								<p>resfeber@gmail.com</p>
+							</div>
+							<div className="contactDetailsTextsItem">
+								<a href="https://vk.com/resfeber.travel"
+									target="_blank"
+									rel = "noreferrer"
+								>
+									Сообщество Вконтакте
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
