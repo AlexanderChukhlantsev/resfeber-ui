@@ -18,7 +18,7 @@ const Contact = () => {
 								<h5>Для связи используйте:</h5>
 							</div>
 							<div className="contactDetailsTextsItem">
-								<p>resfeber@gmail.com</p>
+								<p>resfeber.travelrussia@gmail.com</p>
 							</div>
 							<div className="contactDetailsTextsItem">
 								<a href="https://vk.com/resfeber.travel"
