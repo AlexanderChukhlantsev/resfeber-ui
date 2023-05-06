@@ -29,11 +29,14 @@
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  color: #003580;
+  color: white;
+  appearance: none;
+  border-radius: 10px;
+  background-color: #0071c2;
 }
 
 .navButton:hover {
-	background-color: lightgray;
+	background-color: #0051c2;
 }
 
 .logoContainer {
