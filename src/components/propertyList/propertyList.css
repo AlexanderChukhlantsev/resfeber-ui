@@ -22,11 +22,15 @@
 .pListTitles>h1{
   font-size: 18px;
   color: #444;
+	word-wrap: break-word;
+	text-transform: capitalize;
 }
 
 .pListTitles>h2{
   font-size: 14px;
   font-weight: 300;
+	word-wrap: break-word;
+	text-transform: lowercase;
 }
 
 img {
