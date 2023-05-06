@@ -1,31 +1,34 @@
+import { Link } from "react-router-dom";
 import "./searchItem.css";
 
-const SearchItem = () => {
+const SearchItem = ({item}) => {
   return (
     <div className="searchItem">
       <img
-        src="https://www.rewizor.ru/files/40595xpuc.jpg"
+        src={item.photos[0]}
         alt=""
         className="siImg"
       />
       <div className="siDesc">
-        <h1 className="siTitle">Кунсткамера</h1>
-        <span className="siDistance">2,7 км от центра</span>
+        <h1 className="siTitle">{item.name}</h1>
+        <span className="siDistance">{item.distance} от центра</span>
         <span className="siSubtitle">
-					Музей
+					{item.type}
         </span>
         <span className="siFeatures">
-					Старейший музей России, основанный в 1714 году на базе личных коллекций Петра I.
+					{item.desc}
         </span>
       </div>
       <div className="siDetails">
-        <div className="siRating">
-          <span>Отлично</span>
-          <button>4.4</button>
-        </div>
+				{item.rating && <div className="siRating">
+          <span>{item.ratingDesc}</span>
+          <button>{item.rating}</button>
+        </div>}
         <div className="siDetailTexts">
-          <span className="siPrice">400 ₽</span>
+          <span className="siPrice">Экскурсия {item.cheapestPrice} ₽</span>
+					<Link to={`/places/${item._id}`}>
           <button className="siCheckButton">Подробнее</button>
+					</Link>
         </div>
       </div>
     </div>
