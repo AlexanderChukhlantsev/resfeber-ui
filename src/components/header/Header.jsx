@@ -71,10 +71,10 @@ const Header = ({ type }) => {
             <FontAwesomeIcon icon={faMagnifyingGlass} />
             <span>Главная</span>
           </div>
-          <div className="headerListItem" onClick={handleSearchPlacesPage}>
+          {/* <div className="headerListItem" onClick={handleSearchPlacesPage}>
             <FontAwesomeIcon icon={faPlaceOfWorship} />
             <span>Места</span>
-          </div>
+          </div> */}
           <div className="headerListItem" onClick={handleSearchInfoPage}>
             <FontAwesomeIcon icon={faInfoCircle} />
             <span>Информация</span>

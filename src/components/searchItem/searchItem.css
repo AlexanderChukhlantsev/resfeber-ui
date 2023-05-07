@@ -37,6 +37,7 @@
 
 .siFeatures{
   font-size: 12px;
+	text-align: justify;
 }
 
 .siDetails {
@@ -55,11 +56,11 @@
   font-weight: 500;
 }
 .siRating>button{
- background-color: #003580;
- color: white;
- padding: 5px;
- font-weight: bold;
- border: none;
+  background-color: #003580;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  border: none;
 }
 
 .siDetailTexts{
@@ -71,6 +72,7 @@
 
 .siPrice{
   font-size: 20px;
+	text-align: start;
 }
 
 .siCheckButton{
