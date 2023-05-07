@@ -16,8 +16,9 @@ const List = () => {
   // const [options, setOptions] = useState(location.state.options);
 	const [min, setMin] = useState(undefined);
 	const [max, setMax] = useState(undefined);
+	// const [type, setType] = useState(location.state.type);
 
-  const { data, loading, error, reFetch } = useFetch(
+  const { data, loading, reFetch } = useFetch(
     `/places?city=${destination || "Москва"}&min=${min || 0 }&max=${max || 5000}`
   );
 
@@ -34,7 +35,7 @@ const List = () => {
             <h1 className="lsTitle">Поиск</h1>
             <div className="lsItem">
               <label>Укажите место назначения</label>
-              <input placeholder={destination} type="text" />
+              <input onChange={e => setDestination(e.target.value)} placeholder={destination} type="text" />
             </div>
             <div className="lsItem">
               <label>Укажите даты</label>

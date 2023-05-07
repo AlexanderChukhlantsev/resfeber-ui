@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { useNavigate, useResolvedPath } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { RegContext } from "../../context/RegContext.js";
 import "./registration.css";
 import axios from "axios";
