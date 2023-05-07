@@ -1,0 +1,50 @@
+.reg {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rInput{
+  height: 30px;
+  padding: 10px;
+}
+
+.rButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.rButton:disabled{
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+.rButton:hover {
+	background-color: #0051c2;
+}
+
+.rErrMessage {
+	font-size: 14px;
+	max-width: 180px;
+	word-wrap: break-word;
+	color: #C24641;
+}
+
+.rLowerText {
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	text-align: center;
+}

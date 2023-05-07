@@ -13,6 +13,7 @@ import { useContext, useState } from "react";
 import {format} from "date-fns";
 import { useNavigate } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext";
+import { AuthContext } from "../../context/AuthContext.js";
 
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
@@ -39,24 +40,24 @@ const Header = ({ type }) => {
       };
     });
   };
-
+	const { user } = useContext(AuthContext);
 	const { dispatch } = useContext(SearchContext);
 
   const handleSearchPlacesPage = () => {
 		dispatch({ type: "NEW_SEARCH", payload: { destination, dates, options } });
     navigate("/places", { state: { destination, dates, options } });
   };
-
 	const handleSearchMainPage = () => {
     navigate("/");
   };
-
 	const handleSearchInfoPage = () => {
     navigate("/info");
   };
-
 	const handleSearchContactPage = () => {
     navigate("/contact");
+  };
+	const handleLoginPage = () => {
+    navigate("/login");
   };
 
   return (
@@ -93,7 +94,7 @@ const Header = ({ type }) => {
               Помогаем быстро и удобно находить новые, неизведенные туристические места.<br/>
 							Проходить экскурсии для того чтобы лучше познать историю.
             </p>
-            <button className="headerBtn">Войдите или Зарегистрируйтесь</button>
+            {!user && <button onClick={handleLoginPage} className="headerBtn">Войдите или Зарегистрируйтесь</button>}
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faPlaceOfWorship} className="headerIcon" />

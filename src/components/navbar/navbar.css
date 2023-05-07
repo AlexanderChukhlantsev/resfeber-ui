@@ -42,5 +42,18 @@
 .logoContainer {
 	display: flex;
 	align-items: center;
-	justify-content: space-between
+	justify-content: space-between;
+}
+
+.userBar {
+	display: flex;
+}
+
+.userBarItem {
+	margin-right: 10px;
+}
+.userBarItem:last-child {
+	cursor: pointer;
+	margin-right: 0px;
+	margin-left: 20px;
 }
