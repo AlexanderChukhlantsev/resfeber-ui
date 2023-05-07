@@ -11,7 +11,7 @@ const SearchItem = ({item}) => {
       />
       <div className="siDesc">
         <h1 className="siTitle">{item.name}</h1>
-        <span className="siDistance">{item.distance}м от центра</span>
+        <span className="siDistance">{item.distance} от центра</span>
         <span className="siSubtitle">
 					{item.city} | {item.type}
         </span>

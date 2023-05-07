@@ -90,7 +90,7 @@ const Place = () => {
 							<span>{data.address} {data.city}</span>
 						</div>
 						<span className="placeDistance">
-							Отличная локация – {data.distance}м от центра
+							Отличная локация – {data.distance} от центра
 						</span>
 						<div className="placeImages">
 							{data.photos?.map((photo, i) => (
