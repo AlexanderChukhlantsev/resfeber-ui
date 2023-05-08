@@ -26,7 +26,7 @@ const PropertyList = () => {
                   className="pListImg"
                 />
                 <div className="pListTitles">
-                  <h1>{data[i]?.type}</h1>
+                  <h1>{data[i]?.titleType}</h1>
                   <h2>{data[i]?.count} {data[i]?.type}</h2>
                 </div>
               </div>
