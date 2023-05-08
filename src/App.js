@@ -10,6 +10,8 @@ import Info from "./pages/info/Info";
 import Contact from "./pages/contact/Contact"
 import Login from "./pages/login/Login";
 import Registration from "./pages/registration/Registration";
+import FinishReserve from "./pages/finishReserve/FinishReserve";
+import RequierAuth from "./hoc/RequireAuth";
 
 function App() {
   return (
@@ -22,6 +24,13 @@ function App() {
 				<Route path="/contact" element={<Contact/>}/>
 				<Route path="/login" element={<Login/>}/>
 				<Route path="/register" element={<Registration/>}/>
+				{/* <Route path="/finishreserve" element={
+					<RequierAuth>
+						<FinishReserve/>
+					</RequierAuth>
+				}/> */}
+				<Route path="/finishreserve" element={<FinishReserve/>}/>
+				<Route path="*" element={<h1>404 Такого адреса нету на сервере!</h1>} />
       </Routes>
     </BrowserRouter>
   );

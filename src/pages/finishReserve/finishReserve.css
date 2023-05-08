@@ -1,0 +1,26 @@
+.finishReserve {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.finResContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.finResLowerText {
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	text-align: center;
+}
+
+.finResMainText {
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	flex-direction: column;
+}

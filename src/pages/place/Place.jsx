@@ -12,28 +12,29 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useState } from "react";
 import useFetch from "../../hooks/useFetch.js";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext";
-
+import { AuthContext } from "../../context/AuthContext";
+import Reserve from "../../components/reserve/Reserve";
 
 const Place = () => {
 	const location = useLocation();
 	const id = location.pathname.split("/")[2];
 	const [slideNumber, setSlideNumber] = useState(0);
 	const [open, setOpen] = useState(false);
-
+	const [openModal, setOpenModal] = useState(false);
 	const { data, loading } = useFetch(`/places/find/${id}`);
+	const { user } = useContext(AuthContext);
+	// const { options } = useContext(SearchContext);
+	const { dates, options } = useContext(SearchContext);
+  const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
+  function dayDifference(date1, date2) {
+    const timeDiff = Math.abs(date2.getTime() - date1.getTime());
+    const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
+    return diffDays;
+  }
 
-	const { options } = useContext(SearchContext);
-	// const { dates, options } = useContext(SearchContext);
-  // const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
-  // function dayDifference(date1, date2) {
-  //   const timeDiff = Math.abs(date2.getTime() - date1.getTime());
-  //   const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
-  //   return diffDays;
-  // }
-
-	// const days = (dayDifference(dates[0].endDate, dates[0].startDate));
+	const days = (dayDifference(dates[0].endDate, dates[0].startDate));
 
   const handleOpen = (i) => {
     setSlideNumber(i);
@@ -51,6 +52,15 @@ const Place = () => {
 
     setSlideNumber(newSlideNumber)
   };
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+		if (user) {
+			setOpenModal(true);
+		} else {
+			navigate("/login");
+		}
+	}
 
   return (
     <div>
@@ -83,7 +93,7 @@ const Place = () => {
 						</div>
 					)}
 					<div className="placeWrapper">
-						<button className="bookNow">Оформить экскурсию</button>
+						<button onClick={handleClick} className="bookNow">Оформить экскурсию</button>
 						<h1 className="placeTitle">{data.name}</h1> 
 						<div className="placeAddress">
 							<FontAwesomeIcon icon={faLocationDot} />
@@ -113,12 +123,12 @@ const Place = () => {
 								<h1>Идеально для тех, кто хочет узнать новое!</h1>
 								<span>
 										Место расположено недалеко от центра, с отличной оценков в {data.rating} балла. <br />
-										Цена экскурсия за {options.human} человек:
+										Цена экскурсии за {options.human} человека:
 								</span>
 								<h2>
 									<b>{options.human * data.cheapestPrice} ₽</b>
 								</h2>
-								<button>Оформить экскурсию</button>
+								<button onClick={handleClick}>Оформить экскурсию</button>
 							</div>
 						</div>
 					</div>
@@ -127,6 +137,7 @@ const Place = () => {
 				</div>
 				) 
 			}
+			{openModal && <Reserve setOpen={setOpenModal} placeId={id}/>}
     </div>
   );
 };
