@@ -7,7 +7,7 @@ const FinishReserve = () => {
 	const {user} = useContext(AuthContext);
 	const navigate = useNavigate();
 	const handleMainPage = () => {
-    navigate(-1);
+    navigate("/");
   };
 	const location = useLocation();
 	const fromPage = location.state?.from?.pathname || '/';

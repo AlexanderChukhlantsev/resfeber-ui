@@ -60,6 +60,27 @@ const Registration = () => {
 				onChange={handleChange} 
 				className="rInput" 
 			/>
+			<input 
+				type="text" 
+				placeholder="страна" 
+				id="country" 
+				onChange={handleChange} 
+				className="rInput" 
+			/>
+			<input 
+				type="text" 
+				placeholder="город" 
+				id="city" 
+				onChange={handleChange} 
+				className="rInput" 
+			/>
+			<input 
+				type="text" 
+				placeholder="телефон" 
+				id="phone" 
+				onChange={handleChange} 
+				className="rInput" 
+			/>
 			<button disabled={loading} onClick={handleClick} className="rButton">Зарегистрироваться</button>
 			<div onClick={handleLoginPage} className="rLowerText">Уже есть аккунт? Авторизуйтесь</div>
 			{error && <div className="rErrMessage">{error.message}</div>}
