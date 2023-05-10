@@ -12,7 +12,7 @@
 }
 
 .rInput{
-  height: 30px;
+  height: 20px;
   padding: 10px;
 }
 
@@ -47,4 +47,10 @@
 	font-weight: 600;
 	cursor: pointer;
 	text-align: center;
+}
+
+.rLowerTextTwo {
+	font-size: 13px;
+	font-weight: 600;
+	text-align: start;
 }

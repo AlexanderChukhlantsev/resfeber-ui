@@ -38,6 +38,7 @@ const Login = () => {
 	return <div className="login">
 		<div className="lContainer">
 			<div onClick={handleMainPage} className="lowerText">Вернуться на главную</div>
+			<div className="rLowerTextTwo">Введите имя пользователя</div>
 			<input 
 				type="text" 
 				placeholder="имя пользователя" 
@@ -45,6 +46,7 @@ const Login = () => {
 				onChange={handleChange} 
 				className="lInput" 
 			/>
+			<div className="rLowerTextTwo">Введите пароль</div>
 			<input
 				type="password" 
 				placeholder="пароль" 

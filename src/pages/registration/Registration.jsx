@@ -39,6 +39,7 @@ const Registration = () => {
 	return <div className="reg">
 		<div className="rContainer">
 			<div onClick={handleMainPage} className="rLowerText">Вернуться на главную</div>
+			<div className="rLowerTextTwo">Введите имя пользователя</div>
 			<input 
 				type="text" 
 				placeholder="имя пользователя" 
@@ -46,6 +47,7 @@ const Registration = () => {
 				onChange={handleChange} 
 				className="rInput" 
 			/>
+			<div className="rLowerTextTwo">Введите email</div>
 			<input 
 				type="email" 
 				placeholder="email" 
@@ -53,6 +55,7 @@ const Registration = () => {
 				onChange={handleChange} 
 				className="rInput" 
 			/>
+			<div className="rLowerTextTwo">Введите пароль</div>
 			<input
 				type="password" 
 				placeholder="пароль" 
@@ -60,6 +63,7 @@ const Registration = () => {
 				onChange={handleChange} 
 				className="rInput" 
 			/>
+			<div className="rLowerTextTwo">Укажите страну проживания</div>
 			<input 
 				type="text" 
 				placeholder="страна" 
@@ -67,6 +71,7 @@ const Registration = () => {
 				onChange={handleChange} 
 				className="rInput" 
 			/>
+			<div className="rLowerTextTwo">Укажите город проживания</div>
 			<input 
 				type="text" 
 				placeholder="город" 
@@ -74,6 +79,7 @@ const Registration = () => {
 				onChange={handleChange} 
 				className="rInput" 
 			/>
+			<div className="rLowerTextTwo">Введите номер телефона</div>
 			<input 
 				type="text" 
 				placeholder="телефон" 
