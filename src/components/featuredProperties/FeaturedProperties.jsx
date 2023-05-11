@@ -1,4 +1,5 @@
 import useFetch from "../../hooks/useFetch";
+import { Link } from "react-router-dom";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
@@ -8,6 +9,7 @@ const FeaturedProperties = () => {
     <div className="fp">
 			{loading ? "Загрузка, пожалуйста подождите" : <>
 				{ data.map(item => (
+				// <Link to={`/places/${item._id}`}>
 					<div className="fpItem" key={item._id}>
 						<img
 							src={item.photos[0]}
@@ -22,6 +24,7 @@ const FeaturedProperties = () => {
 							<span>{item.ratingDesc}</span>
 						</div>}
 					</div>
+				// </Link>
 				))}
 			</>}
     </div>

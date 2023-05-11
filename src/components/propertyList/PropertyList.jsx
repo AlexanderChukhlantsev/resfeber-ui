@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch";
 import "./propertyList.css";
 
 const PropertyList = () => {
-  const { data, loading, error } = useFetch("/places/countByType");
+  const { data, loading } = useFetch("/places/countByType");
 
   const images = [
 		"https://img.freepik.com/free-vector/moscow-concept-illustration_114360-5886.jpg?w=826&t=st=1682920793~exp=1682921393~hmac=be17c4146dcbc3e887174a9064f1722ee8938d7307ecca991b3f971e974c9851",
@@ -19,17 +19,17 @@ const PropertyList = () => {
         <>
           {data &&
             images.map((img,i) => (
-              <div className="pListItem" key={i}>
-                <img
-                  src={img}
-                  alt=""
-                  className="pListImg"
-                />
-                <div className="pListTitles">
-                  <h1>{data[i]?.titleType}</h1>
-                  <h2>{data[i]?.count} {data[i]?.type}</h2>
-                </div>
-              </div>
+							<div className="pListItem" key={i}>
+								<img
+									src={img}
+									alt=""
+									className="pListImg"
+								/>
+								<div className="pListTitles">
+									<h1>{data[i]?.titleType}</h1>
+									<h2>{data[i]?.count} {data[i]?.type}</h2>
+								</div>
+							</div>
             ))}
         </>
       )}

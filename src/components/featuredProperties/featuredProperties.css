@@ -11,6 +11,8 @@
   gap: 10px;
   display: flex;
   flex-direction: column;
+	max-width: 241px;
+	/* max-height: 402px; */
 }
 
 .fpImg{
