@@ -33,6 +33,7 @@
 
 .placeTitle {
   font-size: 24px;
+	max-width: 723px;
 }
 
 .placeAddress {
